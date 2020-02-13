@@ -1,30 +1,18 @@
+function visPersonRegister(){
+    let personRegister=["Fornavn", "Etternavn", "Telefonnr", "Epost"];
 
-var addBtn = document.getElementById("btn");
-var kundeData = [];
+    personRegister.push("Fornavn", "Etternavn", "Telefonnr", "Epost");
 
-function kunder(etternavn, fornavn, telefonnr, epost ) {
-    this.etternavn = etternavn;
-    this.fornavn = fornavn;
-    this.telefonnr = telefonnr;
-    this.epost = epost;
+    document.getElementById("fornavn").value;
 
-}
+    // skriv ut
+    let ut = "<table><tr>" +
+        "<th>Navn</th><th>Telefonnr</th><th>Epost</th>" + "</tr>";
 
-document.getElementById("kjopPresset").addEventListener("click", kundeData);
-
-
-function kjøpPresset() {
-    let fornavn = document.getElementById("fornavn").value;
-    let etternavn = document.getElementById("etternavn").value;
-    let telefonnr = document.getElementById("telefonnr").value;
-    let epost = document.getElementById("epost").value;
-    alert("Informasjonen oppgitt er: "+fornavn + etternavn + telefonnr + epost);
-}
-
-function hvisAlleBilett() {
-    
-}
-
-function slettBruker() {
-
+    for (let p of personRegister){
+        ut+="<tr>";
+        ut+="<td>"+p.navn+"</td><td>"+p.telefonnr+"</td><td>"+p.epost+"</td>";
+        ut+="</tr>";
+    }
+    document.getElementById("personRegister").innerHTML=ut;
 }
