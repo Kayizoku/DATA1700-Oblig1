@@ -2,6 +2,7 @@ let personRegister = [];
 
 function billettKjopt(){
 
+    const antallBilletter = document.getElementById("antallBilletter").value;
     const valgtFilm = document.getElementById("valgtFilm").value;
     const fornavn = document.getElementById("fornavn").value;
     const etternavn = document.getElementById("etternavn").value;
@@ -9,6 +10,7 @@ function billettKjopt(){
     const epost = document.getElementById("epost").value;
 
     const person = {
+        antallBilletter: antallBilletter,
         valgtFilm: valgtFilm,
         fornavn: fornavn,
         etternavn: etternavn,
@@ -19,8 +21,10 @@ function billettKjopt(){
     personRegister.push(person);
     console.log(personRegister);
 
-    if (fornavn == "" && etternavn){
-        document.getElementById("feilfornavn").innerHTML = "Feil fornavn";
+    if (valgtFilm === "" || fornavn === "" || etternavn === "" || telefonnr === "" || epost === "" ){
+        document.getElementById("feilValgtFilm");
+        document.getElementById("feilFornavn").innerHTML = "påbudt med fornavn!";
+        document.getElementById("feilEtternavn").innerHTML = "Feil etternavn!";
     }
 
     document.getElementById("valgtFilm").value = "";
@@ -45,7 +49,6 @@ function billettKjopt(){
 
 function slettBillettene() {
     personRegister = [];
-
     document.getElementById("visPersonRegister").innerHTML="";
 
 
