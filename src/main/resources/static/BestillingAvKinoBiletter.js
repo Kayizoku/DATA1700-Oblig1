@@ -7,6 +7,14 @@ function visPersonRegister(){
         Epost: document.getElementById('epost').value
     };
 
+    const person1 = {
+        Fornavn : "Mohammad Tayyab",
+        Etternavn : "Khalid",
+        Telefonnr : 47344987,
+        Epost : "TayyabKhalid306@gmail.com"
+    };
+    kundeData.push(person1);
+
     for (let i = 0; i < kundeData.length; i++) {
         alert(kundeData[i].Fornavn + kundeData[i].Etternavn
             + kundeData[i].Telefonnr + kundeData[i].Epost);
@@ -20,9 +28,9 @@ function visPersonRegister(){
     for (let k of kundeData){
         ut+="<tr>";
         ut+="<td>"+k.Fornavn+"</td><td>"+k.Etternavn + "</td><td>"
-            +k.Telefonnr+"</td><td>"+k.Epost+"</td>";
-        ut+="</tr>";
+            +k.Telefonnr+"</td><td>"+k.Epost+"</td>"
+        ut+="</tr>"
     }
-    document.getElementById("kundeRegister").innerHTML=ut;
+    document.getElementById("kundeData").innerHTML=ut;
 }
 
