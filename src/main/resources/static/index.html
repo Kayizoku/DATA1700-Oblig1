@@ -13,29 +13,40 @@
 <h1><b>Bestilling av Kinobiletter</b></h1>
 
 <div>
-    Velg film: <select>
+    Velg film: <select id="velgFilm">
     <option value="Avengers: End Game">Avengers: End Game</option>
     <option value="Maleficent">Maleficent</option>
     <option value="Tangled">Tangled</option>
     <option value="Frozen 2">Frozen 2</option>
     <option value="Harry Potter">Harry Potter</option>
 </select>
+
 </div>
-<br>
 
-<div>
-    <form>
-        Antall <select name="antall" id="antall"></select><br><br>
+<table>
+    <tr>
+        <td>Fornavn</td>
+        <td><input id="fornavn" type="text" /></td>
+    </tr>
+    <tr>
+        <td>Etternavn</td>
+        <td><input id="etternavn" type="text"/></td>
+    </tr>
+    <tr>
+        <td>Telefonnr</td>
+        <td><input id="telefonnr" type="text"/></td>
+    </tr>
+    <tr>
+        <td>Epost</td>
+        <td><input id="epost" type="text"/></td>
+    </tr>
+</table>
+<button onclick="billettKjopt()">Kjop billett</button>
+<h2><b>Alle billettene</b></h2>
 
-        Fornavn   <input type="text" name="fornavn" id="fornavn"/><br>
-        Etternavn <input type="text" name="etternavn" id="etternavn"/><br>
-        Telefonnr <input type="text" name="telefonnr" id="telefonnr"/><br>
-        Epost     <input type="text" name="epost" id="epost"/><br>
-    <button onclick="visPersonRegister()";>Kjop billett</button>
-    <div id="kundeData"></div>
+<button onclick="slettBillettene">Slett alle billettene</button>
 
-    </form>
-</div>
+
 
 </body>
 </html>

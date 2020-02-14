@@ -1,36 +1,43 @@
-function visPersonRegister(){
+let personRegister = [];
 
-    let kundeData = {
-        Fornavn: document.getElementById("fornavn").value,
-        Etternavn: document.getElementById("etternavn").value,
-        Telefonnr: document.getElementById('telefonnr').value,
-        Epost: document.getElementById('epost').value
+function billettKjopt(){
+
+    const fornavn = document.getElementById("fornavn").value;
+    const etternavn = document.getElementById("etternavn").value;
+    const telefonnr = document.getElementById("telefonnr").value;
+    const epost = document.getElementById("epost").value;
+
+    const person = {
+        fornavn: fornavn,
+        etternavn: etternavn,
+        telefonnr: telefonnr,
+        epost: epost,
     };
 
-    const person1 = {
-        Fornavn : "Mohammad Tayyab",
-        Etternavn : "Khalid",
-        Telefonnr : 47344987,
-        Epost : "TayyabKhalid306@gmail.com"
-    };
-    kundeData.push(person1);
+    personRegister.push(person);
+    console.log(personRegister);
 
-    for (let i = 0; i < kundeData.length; i++) {
-        alert(kundeData[i].Fornavn + kundeData[i].Etternavn
-            + kundeData[i].Telefonnr + kundeData[i].Epost);
-        kundeData.push();
-    }
+    document.getElementById("fornavn").value = "";
+    document.getElementById("etternavn").value = "";
+    document.getElementById("telefonnr").value = "";
+    document.getElementById("epost").value = "";
 
-    // skriv ut
-    let ut = "<table><tr>" + "<th>Fornavn</th><th>Etternavn</th>" +
-        "<th>Telefonnr</th><th>Epost</th>" + "</tr>";
+    let ut = "<table><tr>" + "<th>Film</th></th>Fornavn<th>Etternavn</th><th>Adresse</th><th>Telefonnr</th>" + "</tr>";
 
-    for (let k of kundeData){
+    for (let p of personRegister){
+        console.log(personRegister);
         ut+="<tr>";
-        ut+="<td>"+k.Fornavn+"</td><td>"+k.Etternavn + "</td><td>"
-            +k.Telefonnr+"</td><td>"+k.Epost+"</td>"
-        ut+="</tr>"
+        ut+="<td>"+p.fornavn+"<td>"+p.etternavn+"</td><td>"+p.telefonnr+"</td><td>"+p.epost+"</td>";
+        ut+="</tr>";
+
+        document.getElementById("visPersonRegister").innerHTML=ut;
     }
-    document.getElementById("kundeData").innerHTML=ut;
+
+}
+
+function slettBillettene() {
+    personRegister = [];
+    document.getElementById("slettBilettene").innerHTML="";
+
 }
 
