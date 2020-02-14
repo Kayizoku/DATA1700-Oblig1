@@ -14,11 +14,13 @@ function visPersonRegister(){
     }
 
     // skriv ut
-    let ut = "<table><tr>" + "<th>Fornavn</th><th>Etternavn</th><th>Telefonnr</th><th>Epost</th>" + "</tr>";
+    let ut = "<table><tr>" + "<th>Fornavn</th><th>Etternavn</th>" +
+        "<th>Telefonnr</th><th>Epost</th>" + "</tr>";
 
     for (let k of kundeData){
         ut+="<tr>";
-        ut+="<td>"+p.Fornavn+"</td><td>"+p.Etternavn+"</td><td>"+p.Telefonnr+"</td><td>"+p.Epost+"</td>";
+        ut+="<td>"+k.Fornavn+"</td><td>"+k.Etternavn + "</td><td>"
+            +k.Telefonnr+"</td><td>"+k.Epost+"</td>";
         ut+="</tr>";
     }
     document.getElementById("kundeRegister").innerHTML=ut;
