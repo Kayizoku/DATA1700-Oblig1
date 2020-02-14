@@ -1,18 +1,26 @@
 function visPersonRegister(){
-    let personRegister=["Fornavn", "Etternavn", "Telefonnr", "Epost"];
 
-    personRegister.push("Fornavn", "Etternavn", "Telefonnr", "Epost");
+    let kundeData = {
+        Fornavn: document.getElementById("fornavn").value,
+        Etternavn: document.getElementById("etternavn").value,
+        Telefonnr: document.getElementById('telefonnr').value,
+        Epost: document.getElementById('epost').value
+    };
 
-    document.getElementById("fornavn").value;
+    for (let i = 0; i < kundeData.length; i++) {
+        alert(kundeData[i].Fornavn + kundeData[i].Etternavn
+            + kundeData[i].Telefonnr + kundeData[i].Epost);
+        kundeData.push();
+    }
 
     // skriv ut
-    let ut = "<table><tr>" +
-        "<th>Navn</th><th>Telefonnr</th><th>Epost</th>" + "</tr>";
+    let ut = "<table><tr>" + "<th>Fornavn</th><th>Etternavn</th><th>Telefonnr</th><th>Epost</th>" + "</tr>";
 
-    for (let p of personRegister){
+    for (let k of kundeData){
         ut+="<tr>";
-        ut+="<td>"+p.navn+"</td><td>"+p.telefonnr+"</td><td>"+p.epost+"</td>";
+        ut+="<td>"+p.Fornavn+"</td><td>"+p.Etternavn+"</td><td>"+p.Telefonnr+"</td><td>"+p.Epost+"</td>";
         ut+="</tr>";
     }
-    document.getElementById("personRegister").innerHTML=ut;
+    document.getElementById("kundeRegister").innerHTML=ut;
 }
+
