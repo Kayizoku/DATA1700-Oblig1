@@ -13,7 +13,7 @@
 <h1><b>Bestilling av Kinobiletter</b></h1>
 
 <div>
-    Velg film: <select id="velgFilm">
+    Velg film: <select id="valgtFilm">
     <option value="Avengers: End Game">Avengers: End Game</option>
     <option value="Maleficent">Maleficent</option>
     <option value="Tangled">Tangled</option>
@@ -27,6 +27,7 @@
     <tr>
         <td>Fornavn</td>
         <td><input id="fornavn" type="text" /></td>
+        <td><h5 id="feilfornavn"></h5></td>
     </tr>
     <tr>
         <td>Etternavn</td>
@@ -43,10 +44,9 @@
 </table>
 <button onclick="billettKjopt()">Kjop billett</button>
 <h2><b>Alle billettene</b></h2>
+<div id="visPersonRegister"></div>
 
-<button onclick="slettBillettene">Slett alle billettene</button>
-
-
+<button onclick="slettBillettene()">Slett alle billettene</button>
 
 </body>
 </html>
