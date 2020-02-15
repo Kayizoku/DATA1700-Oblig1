@@ -40,6 +40,10 @@ target/
 .classpath
 .project
 
+# uncessary path
+.mvnw/wrapper
+java/com/example/demo
+
 # NetBeans specific
 nbproject/private/
 build/
