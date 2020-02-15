@@ -42,13 +42,11 @@ function billettKjopt(){
     document.getElementById("telefonnr").value = "";
     document.getElementById("epost").value = "";
 
-    let ut = "<table><tr>" + "<th>Film</th><th>Antall</th><th>Fornavn</th><th>" +
-        "Etternavn</th><th>Telefonnr</th><th>Epost</th>" + "</tr>";
+    let ut = "<table><tr><th>Film</th><th>Antall</th><th>Fornavn</th><th>Etternavn</th><th>Telefonnr</th><th>Epost</th>" + "</tr>";
 
     for (let p of personRegister){
         ut+="<tr>";
-        ut+="<td>"+p.valgtFilm+"<td>"+p.antallBilletter+"</td><td>"
-            +p.fornavn+"</td><td>"+p.etternavn+"</td><td>p.telefonnr<td>p.epost</td>";
+        ut+="<td>"+p.valgtFilm+"<td>"+p.antallBilletter+"</td><td>"+p.fornavn+"</td><td>"+p.etternavn+"</td><td>"+p.telefonnr+"</td><td>"+p.epost+"</td></td>";
         ut+="</tr>";
 
         document.getElementById("visPersonRegister").innerHTML=ut;
