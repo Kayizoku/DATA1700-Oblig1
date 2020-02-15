@@ -6,15 +6,36 @@
     <head>
         <script src="BestillingAvKinoBiletter.js"></script>
         <title></title>
+        <style>
 
+            * {
+                box-sizing: border-box;
+            }
+
+            #feilAntallBiletter, #feilFornavn, #feilEtternavn, #feilTelefonnr, #feilEpost {
+                color: red;
+            }
+
+            #slettBillettene {
+                background-color:darkred;
+                border: 1px solid red;
+                border-radius: 50px;
+            }
+
+            #billettKjopt {
+                background-color: green;
+                border: 1px solid green;
+                border-radius: 50px;
+            }
+
+        </style>
     </head>
 
 <body>
 <h1><b>Bestilling av Kinobiletter</b></h1>
 
 <div>
-    Velg film:
-    <select id="valgtFilm"><td><h5 id="feilValgtFilm"></h5></td>
+    <label for="valgtFilm">Velg film:</label><select id="valgtFilm">
     <option value="Avengers: End Game">Avengers: End Game</option>
     <option value="Maleficent">Maleficent</option>
     <option value="Tangled">Tangled</option>
@@ -26,7 +47,7 @@
 
 <table>
     <tr>
-        <td>Antall</td>
+        <td id="antall">Antall</td>
         <td><input id="antallBilletter" type="text" size="1"/></td>
         <td><h5 id="feilAntallBiletter"></h5></td>
     </tr>
@@ -44,18 +65,20 @@
         <td>Telefonnr</td>
         <td><input id="telefonnr" type="text"/></td>
         <td><h5 id="feilTelefonnr"></h5></td>
+
     </tr>
     <tr>
         <td>Epost</td>
         <td><input id="epost" type="text"/></td>
         <td><h5 id="feilEpost"></h5></td>
+
     </tr>
 </table>
-<button onclick="billettKjopt()">Kjop billett</button>
+<button id="billettKjopt" onclick="billettKjopt()">Kjop billett</button>
 <h2><b>Alle billettene</b></h2>
 <div id="visPersonRegister"></div>
 
-<button onclick="slettBillettene()">Slett alle billettene</button>
+<button id="slettBillettene" onclick="slettBillettene()">Slett alle billettene</button>
 
 </body>
 </html>
