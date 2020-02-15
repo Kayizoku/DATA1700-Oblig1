@@ -65,3 +65,9 @@ pom.xml.tag
 
 out/
 .idea/*.xml
+
+src/test/java/com/example/demo/
+
+*.cmd
+
+HELP.md
