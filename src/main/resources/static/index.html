@@ -27,7 +27,6 @@
                 border: 1px solid green;
                 border-radius: 50px;
             }
-
         </style>
     </head>
 
@@ -35,14 +34,14 @@
 <h1><b>Bestilling av Kinobiletter</b></h1>
 
 <div>
-    <label for="valgtFilm">Velg film:</label><select id="valgtFilm">
+    Velg film:
+    <select id="valgtFilm">
     <option value="Avengers: End Game">Avengers: End Game</option>
     <option value="Maleficent">Maleficent</option>
     <option value="Tangled">Tangled</option>
     <option value="Frozen 2">Frozen 2</option>
     <option value="Harry Potter">Harry Potter</option>
 </select>
-
 </div>
 
 <table>
@@ -65,13 +64,11 @@
         <td>Telefonnr</td>
         <td><input id="telefonnr" type="text"/></td>
         <td><h5 id="feilTelefonnr"></h5></td>
-
     </tr>
     <tr>
         <td>Epost</td>
         <td><input id="epost" type="text"/></td>
         <td><h5 id="feilEpost"></h5></td>
-
     </tr>
 </table>
 <button id="billettKjopt" onclick="billettKjopt()">Kjop billett</button>
