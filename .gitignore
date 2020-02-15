@@ -1,4 +1,4 @@
-
+*.mvnw
 *.xml
 
 #
@@ -6,6 +6,7 @@
 #
 
 tomcat
+mvnw
 
 #
 # Default excludes
@@ -39,6 +40,10 @@ target/
 .classpath
 .project
 
+# uncessary path
+.mvnw/wrapper
+java/com/example/demo
+
 # NetBeans specific
 nbproject/private/
 build/
@@ -60,3 +65,15 @@ pom.xml.tag
 
 out/
 .idea/*.xml
+
+src/test/java/com/example/demo/
+
+*.cmd
+
+HELP.md
+
+.mvn/wrapper/
+
+src/main/java/com/example/demo/
+
+*.properties
