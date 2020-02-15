@@ -1,1 +1,1 @@
-# DATA1700-Oblig1
+# Mohammad Tayyab Khalid - s319229@oslomet.no
