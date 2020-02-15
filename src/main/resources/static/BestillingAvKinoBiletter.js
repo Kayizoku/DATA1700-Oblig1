@@ -20,19 +20,19 @@ function billettKjopt(){
     personRegister.push(person);
 
     // input-validering som sjekker om noe har blitt tastet i feltet
-
     if (antallBilletter === "" || fornavn === "" || etternavn === "" || telefonnr === "" || epost === "" ){
         document.getElementById("feilAntallBiletter").innerHTML = "Ma skrive noe inn i antall!";
         document.getElementById("feilFornavn").innerHTML = "Ma skrive noe inn i fornavnet!";
         document.getElementById("feilEtternavn").innerHTML = "Ma skrive noe inn i etternavnet!";
         document.getElementById("feilTelefonnr").innerHTML = "Ma skrive noe inn i telefonnr!";
         document.getElementById("feilEpost").innerHTML = "Ma skrive noe inn i epost!";
+        personRegister = [];
     } else {
-        document.getElementById("feilAntallBiletter").innerHTML = "";
-        document.getElementById("feilFornavn").innerHTML = "";
-        document.getElementById("feilEtternavn").innerHTML = "";
-        document.getElementById("feilTelefonnr").innerHTML = "";
-        document.getElementById("feilEpost").innerHTML = "";
+        document.getElementById("antallBilletter").innerHTML = "";
+        document.getElementById("fornavn").innerHTML = "";
+        document.getElementById("etternavn").innerHTML = "";
+        document.getElementById("telefonnr").innerHTML = "";
+        document.getElementById("epost").innerHTML = "";
     }
 
     document.getElementById("antallBilletter").value;
