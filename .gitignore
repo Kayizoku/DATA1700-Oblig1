@@ -1,4 +1,4 @@
-
+*.mvnw
 *.xml
 
 #
@@ -6,6 +6,7 @@
 #
 
 tomcat
+mvnw
 
 #
 # Default excludes
