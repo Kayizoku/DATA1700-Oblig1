@@ -1,81 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <head>
         <script src="BestillingAvKinoBiletter.js"></script>
         <title></title>
-        <style>
-
-            * {
-                box-sizing: border-box;
-            }
-
-            #feilAntallBiletter, #feilFornavn, #feilEtternavn, #feilTelefonnr, #feilEpost {
-                color: red;
-            }
-
-            #slettBillettene {
-                background-color:darkred;
-                border: 1px solid red;
-                border-radius: 50px;
-            }
-
-            #billettKjopt {
-                background-color: green;
-                border: 1px solid green;
-                border-radius: 50px;
-            }
-        </style>
-    </head>
-
 <body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
 <h1><b>Bestilling av Kinobiletter</b></h1>
 
-<div>
-    Velg film:
+    <form class="form">
+        <label for="valgtFilm"><stong>Velg Film: </stong></label>
     <select id="valgtFilm">
+        <option value="--------"></option>
         <option value="Avengers: End Game">Avengers: End Game</option>
         <option value="Maleficent">Maleficent</option>
         <option value="Tangled">Tangled</option>
         <option value="Frozen 2">Frozen 2</option>
         <option value="Harry Potter">Harry Potter</option>
-    </select>
-</div>
+    </select>   <br>
 
-<table>
-    <tr>
-        <td id="antall">Antall</td>
-        <td><input id="antallBilletter" type="text" size="1"/></td>
-        <td><h5 id="feilAntallBiletter"></h5></td>
-    </tr>
-    <tr>
-        <td>Fornavn</td>
-        <td><input id="fornavn" type="text" /></td>
-        <td><h5 id="feilFornavn"></h5></td>
-    </tr>
-    <tr>
-        <td>Etternavn</td>
-        <td><input id="etternavn" type="text"/></td>
-        <td><h5 id="feilEtternavn"></h5></td>
-    </tr>
-    <tr>
-        <td>Telefonnr</td>
-        <td><input id="telefonnr" type="text"/></td>
-        <td><h5 id="feilTelefonnr"></h5></td>
-    </tr>
-    <tr>
-        <td>Epost</td>
-        <td><input id="epost" type="text"/></td>
-        <td><h5 id="feilEpost"></h5></td>
-    </tr>
-</table>
-<button id="billettKjopt" onclick="billettKjopt()">Kjop billett</button>
+        <div class="form-group">
+            <label for="antallBiletter"><strong>Antall</strong></label>
+            <input type="text" class="form-control form-control-sm" id="antallBiletter">
+        </div>
+
+        <div class="form-group">
+            <label for="fornavn"><strong>Fornavn</strong></label>
+            <input type="text" class="form-control form-control-sm" id="fornavn">
+        </div>
+
+        <div class="form-group">
+            <label for="etternavn"><strong>Etternavn</strong></label>
+            <input type="text" class="form-control form-control-sm" id="etternavn">
+        </div>
+
+        <div class="form-group">
+            <label for="telefonnr"><strong>Telefonnummer</strong></label>
+            <input type="text" class="form-control form-control-sm" id="telefonnr">
+        </div>
+
+        <div class="form-group">
+            <label for="epost"><strong>Epost</strong></label>
+            <input type="text" class="form-control form-control-sm" id="epost">
+        </div>
+
+</form>
+
+<button class="btn btn-primary" onclick="regBilett()">Kjop billett</button>
+        </div>
+        <div class="col-md-8">
 <h2><b>Alle billettene</b></h2>
-<div id="visPersonRegister"></div>
 
-<button id="slettBillettene" onclick="slettBillettene()">Slett alle billettene</button>
+<div id="personene" class="table-responsive"></div>
 
+<button class="btn btn-danger" onclick="slettAlle()">Slett alle billettene</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
