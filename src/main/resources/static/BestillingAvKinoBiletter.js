@@ -1,6 +1,12 @@
 let personRegister = [];
 
 function regBilett() {
+    let antallBiletter = document.getElementById("antallBiletter").value;
+    let fornavn = document.getElementById("fornavn").value;
+    let etternavn = document.getElementById("etternavn").value;
+    let telefonnr = document.getElementById("telefonnr").value;
+    let epost = document.getElementById("epost").value;
+
     const person = {
         antallBiletter : $("#antallBiletter").val(),
         valgtFilm : $("#valgtFilm").val(),
@@ -18,6 +24,29 @@ function regBilett() {
     $("#etternavn").val("");
     $("#telefonnr").val("");
     $("#epost").val("");
+
+// input-validering som sjekker om noe har blitt tastet i feltet
+    if (antallBiletter === "" || fornavn === "" || etternavn === "" || telefonnr === "" || epost === "" ){
+        document.getElementById("feilAntallBiletter").innerHTML = "Ma skrive noe inn i antall!";
+        document.getElementById("feilFornavn").innerHTML = "Ma skrive noe inn i fornavnet!";
+        document.getElementById("feilEtternavn").innerHTML = "Ma skrive noe inn i etternavnet!";
+        document.getElementById("feilTelefonnr").innerHTML = "Ma skrive noe inn i telefonnr!";
+        document.getElementById("feilEpost").innerHTML = "Ma skrive noe inn i epost!";
+        personRegister = [];
+    } else {
+        document.getElementById("antallBilletter").innerHTML = "";
+        document.getElementById("fornavn").innerHTML = "";
+        document.getElementById("etternavn").innerHTML = "";
+        document.getElementById("telefonnr").innerHTML = "";
+        document.getElementById("epost").innerHTML = "";
+    }
+
+    document.getElementById("antallBilletter").value;
+    document.getElementById("valgtFilm").value = "";
+    document.getElementById("fornavn").value = "";
+    document.getElementById("etternavn").value = "";
+    document.getElementById("telefonnr").value = "";
+    document.getElementById("epost").value = "";
 }
 
 function hentAlle() {
@@ -45,31 +74,3 @@ function slettAlle() {
     });
 }
 
-let antallBiletter = document.getElementById("antallBiletter").value;
-let fornavn = document.getElementById("fornavn").value;
-let etternavn = document.getElementById("etternavn").value;
-let telefonnr = document.getElementById("telefonnr").value;
-let epost = document.getElementById("epost").value;
-
-// input-validering som sjekker om noe har blitt tastet i feltet
-if (antallBiletter === "" || fornavn === "" || etternavn === "" || telefonnr === "" || epost === "" ){
-    document.getElementById("feilAntallBiletter").innerHTML = "Ma skrive noe inn i antall!";
-    document.getElementById("feilFornavn").innerHTML = "Ma skrive noe inn i fornavnet!";
-    document.getElementById("feilEtternavn").innerHTML = "Ma skrive noe inn i etternavnet!";
-    document.getElementById("feilTelefonnr").innerHTML = "Ma skrive noe inn i telefonnr!";
-    document.getElementById("feilEpost").innerHTML = "Ma skrive noe inn i epost!";
-    personRegister = [];
-} else {
-    document.getElementById("antallBilletter").innerHTML = "";
-    document.getElementById("fornavn").innerHTML = "";
-    document.getElementById("etternavn").innerHTML = "";
-    document.getElementById("telefonnr").innerHTML = "";
-    document.getElementById("epost").innerHTML = "";
-}
-
-document.getElementById("antallBilletter").value;
-document.getElementById("valgtFilm").value = "";
-document.getElementById("fornavn").value = "";
-document.getElementById("etternavn").value = "";
-document.getElementById("telefonnr").value = "";
-document.getElementById("epost").value = "";
