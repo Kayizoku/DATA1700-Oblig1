@@ -45,6 +45,12 @@ function slettAlle() {
     });
 }
 
+let antallBiletter = document.getElementById("antallBiletter").value;
+let fornavn = document.getElementById("fornavn").value;
+let etternavn = document.getElementById("etternavn").value;
+let telefonnr = document.getElementById("telefonnr").value;
+let epost = document.getElementById("epost").value;
+
 // input-validering som sjekker om noe har blitt tastet i feltet
 if (antallBiletter === "" || fornavn === "" || etternavn === "" || telefonnr === "" || epost === "" ){
     document.getElementById("feilAntallBiletter").innerHTML = "Ma skrive noe inn i antall!";
